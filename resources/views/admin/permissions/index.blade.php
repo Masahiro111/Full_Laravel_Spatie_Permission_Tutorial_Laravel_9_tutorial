@@ -30,7 +30,7 @@
                                         <td>
                                             <div class="flex justify-end">
                                                 <div class="flex space-x-2">
-                                                    <a href="{{ route('admin.permissions.edit', $permisiion->id) }}" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-700">Edit</a>
+                                                    <a href="{{ route('admin.permissions.edit', $permission->id) }}" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-700">Edit</a>
                                                     <form class="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-700" method="POST" action="{{ route('admin.permissions.destroy', $permission->id) }}" onsubmit="return confirm('Are you sure?');">
                                                         @csrf
                                                         @method('DELETE')
