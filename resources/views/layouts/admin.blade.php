@@ -56,6 +56,7 @@
             </div>
         </div>
         @endif
+
         <div class="flex-col w-full md:flex md:flex-row md:min-h-screen">
             <div @click.away="open = false"
                  class="flex flex-col flex-shrink-0 w-full text-gray-700 bg-white md:w-64 dark:text-gray-200 dark:bg-gray-800"

@@ -30,8 +30,8 @@
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <div class="flex justify-end">
                                                 <div class="flex space-x-2">
-                                                    <a href="{{ route('admin.roles.edit', $role->id) }}" class="px-4 py-2 text-sm text-white bg-gray-800 rounded-md hover:bg-gray-600">Edit</a>
-                                                    <form method="POST" action="{{ route('admin.roles.destroy', $role->id) }}" onsubmit="return confirm('Are you sure?');">
+                                                    <a href="{{ route('admin.roles.edit', $role) }}" class="px-4 py-2 text-sm text-white bg-gray-800 rounded-md hover:bg-gray-600">Edit</a>
+                                                    <form method="POST" action="{{ route('admin.roles.destroy', $role) }}" onsubmit="return confirm('Are you sure?');">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button class="px-4 py-2 text-sm text-white bg-red-800 rounded-md hover:bg-red-600" type="submit">Delete</button>

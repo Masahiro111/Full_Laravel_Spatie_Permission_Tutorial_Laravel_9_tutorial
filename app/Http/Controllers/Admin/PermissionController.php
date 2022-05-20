@@ -28,7 +28,9 @@ class PermissionController extends Controller
         Permission::query()
             ->create($validated);
 
-        return redirect()->route('admin.permissions.index');
+        return redirect()
+            ->route('admin.permissions.index')
+            ->with('message', 'Permission created successfully.');
     }
 
     public function edit(Permission $permission)
@@ -43,6 +45,17 @@ class PermissionController extends Controller
         ]);
         $permission->update($validated);
 
-        return redirect()->route('admin.permissions.index');
+        return redirect()
+            ->route('admin.permissions.index')
+            ->with('message', 'Permission updated successfully.');
+    }
+
+    public function destroy(Permission $permission)
+    {
+        $permission->delete();
+
+        return redirect()
+            ->route('admin.permissions.index')
+            ->with('message', 'Permission deleted.');
     }
 }
