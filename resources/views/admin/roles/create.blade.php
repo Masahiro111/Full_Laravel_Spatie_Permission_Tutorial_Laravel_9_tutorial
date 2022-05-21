@@ -12,18 +12,19 @@
                     <div class="sm:col-span-6">
                         <label for="name" class="block text-sm font-medium text-gray-700">Role name </label>
                         <div class="mt-1">
-                            <input type="text" id="name" name="name" class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input type="text" id="name" name="name" class="block w-full px-3 py-2 text-base leading-normal transition duration-150 ease-in-out bg-white border border-gray-400 rounded-md appearance-none sm:text-sm sm:leading-5" />
                         </div>
-                        @error('name') <span class="text-red-400 text-sm">{{ $message }}</span> @enderror
+                        @error('name')
+                        <span class="text-sm text-red-400">{{ $message }}</span>
+                        @enderror
                     </div>
-                    <div class="sm:col-span-6 pt-5">
+                    <div class="pt-5 sm:col-span-6">
                         <button type="submit" class="px-4 py-2 text-sm text-white bg-gray-800 rounded-md hover:bg-gray-600">Create</button>
                     </div>
                 </form>
             </div>
         </div>
         {{-- / table --}}
-
 
     </div>
 </x-admin-layout>

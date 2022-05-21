@@ -58,7 +58,8 @@
         @endif
 
         <div class="flex-col w-full md:flex md:flex-row md:min-h-screen">
-            <div @click.away="open = false"
+            <div
+                 @click.away="open = false"
                  class="flex flex-col flex-shrink-0 w-full text-gray-700 bg-white md:w-64 dark:text-gray-200 dark:bg-gray-800"
                  x-data="{ open: false }">
                 <div class="flex flex-row items-center justify-between flex-shrink-0 px-8 py-4">
@@ -84,7 +85,10 @@
                                   :active="request()->routeIs('admin.permissions.index')">Permissions</x-admin-link>
                     {{-- <x-admin-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.index')">Users
                     </x-admin-link> --}}
-                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <div
+                         @click.away="open = false"
+                         class="relative"
+                         x-data="{ open: false }">
                         <button @click="open = !open"
                                 class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                             <span>{{ Auth::user()->name }}</span>
@@ -95,7 +99,9 @@
                                       clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                        <div
+                             x-show="open"
+                             x-transition:enter="transition ease-out duration-100"
                              x-transition:enter-start="transform opacity-0 scale-95"
                              x-transition:enter-end="transform opacity-100 scale-100"
                              x-transition:leave="transition ease-in duration-75"
@@ -108,7 +114,8 @@
 
                                     <x-dropdown-link
                                                      class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                                                     :href="route('logout')" onclick="event.preventDefault();
+                                                     :href="route('logout')"
+                                                     onclick="event.preventDefault();
                                                             this.closest('form').submit();">
                                         {{ __('Log Out') }}
                                     </x-dropdown-link>
