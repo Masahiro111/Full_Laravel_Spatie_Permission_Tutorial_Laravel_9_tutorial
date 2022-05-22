@@ -2,7 +2,7 @@
     <div class="w-full py-12">
 
         {{-- table --}}
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="mx-auto mb-16 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex justify-end mb-4">
                 <a href="{{ route('admin.roles.index') }}" class="px-4 py-2 text-sm text-white bg-gray-800 rounded-md hover:bg-gray-600">Back Role Index</a>
             </div>
@@ -31,9 +31,9 @@
             </div>
         </div>
 
-        <div class="p-2 mt-6 bg-slate-100">
-            <h2 class="text-2xl font-semibold">Role Permissions</h2>
-            <div class="flex p-2 mt-4 space-x-2">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold border-b-2 pb-4">Role Permissions</h2>
+            <div class="flex pb-2 space-x-2">
                 @if ($role->permissions)
                 @foreach ($role->permissions as $role_permission)
                 <form
@@ -55,7 +55,10 @@
                     <div class="sm:col-span-6">
                         <label for="permission"
                                class="block text-sm font-medium text-gray-700">Permission</label>
-                        <select id="permission" name="permission" autocomplete="permission-name"
+                        <select
+                                id="permission"
+                                name="permission"
+                                autocomplete="permission-name"
                                 class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             @foreach ($permissions as $permission)
                             <option value="{{ $permission->name }}">{{ $permission->name }}</option>
@@ -69,7 +72,7 @@
             <div class="pt-5 sm:col-span-6">
                 <button
                         type="submit"
-                        class="px-4 py-2 bg-green-500 rounded-md hover:bg-green-700">Assign</button>
+                        class="px-4 py-2 text-sm text-white bg-gray-800 rounded-md hover:bg-gray-600">Assign</button>
             </div>
             </form>
         </div>

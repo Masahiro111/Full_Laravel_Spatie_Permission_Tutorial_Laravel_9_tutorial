@@ -5,23 +5,23 @@ return [
     'models' => [
 
         /*
-         * When using the "HasPermissions" trait from this package, we need to know which
-         * Eloquent model should be used to retrieve your permissions. Of course, it
-         * is often just the "Permission" model but you may use whatever you like.
-         *
-         * The model you want to use as a Permission model needs to implement the
-         * `Spatie\Permission\Contracts\Permission` contract.
+         * このパッケージの「HasPermissions」トレイトを使用する場合、
+         * パーミッションを取得するためにどのEloquentモデルを使用する必要があるかを知る必要があります。
+         * もちろん、これは単なる「許可」モデルであることがよくありますが、
+         * 好きなものを使用できます
+         * パーミッションモデルとして使用するモデルは、
+         * `Spatie\Permission\Contracts\Permission`コントラクトを実装する必要があります。
          */
 
         'permission' => Spatie\Permission\Models\Permission::class,
 
         /*
-         * When using the "HasRoles" trait from this package, we need to know which
-         * Eloquent model should be used to retrieve your roles. Of course, it
-         * is often just the "Role" model but you may use whatever you like.
+         *このパッケージの「HasRoles」トレイトを使用する場合、どちらを使用するかを知る必要があります
+         *ロールを取得するには、Eloquentモデルを使用する必要があります。もちろん、
+         *多くの場合、単なる「ロール」モデルですが、好きなものを使用できます。
          *
-         * The model you want to use as a Role model needs to implement the
-         * `Spatie\Permission\Contracts\Role` contract.
+         *ロールモデルとして使用するモデルは、
+         * `Spatie\Permission\Contracts\Role`コントラクトとなります。
          */
 
         'role' => Spatie\Permission\Models\Role::class,
